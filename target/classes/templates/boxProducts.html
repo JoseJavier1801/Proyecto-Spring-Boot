@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Box Products</title>
+  <link rel="stylesheet" type="text/css" href="/style2.css">
+</head>
+<body>
+<h1>Productos en la caja:</h1>
+<h2>Caja ID: <span th:text="${caja.id}"></span></h2>
+
+<table style="border: 1px solid">
+  <tr>
+    <td>ID</td>
+    <td>Name</td>
+  </tr>
+  <tr th:each="producto : ${productos}">
+    <td><span th:text="${producto.id}"></span></td>
+    <td><span th:text="${producto.nombre}"></span></td>
+  </tr>
+</table>
+<a th:href="@{/caja}" class="go-back-button">Go Back</a>
+</a>
+</body>
+</html>

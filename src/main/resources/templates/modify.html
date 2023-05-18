@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modify Product</title>
+    <link rel="stylesheet" type="text/css" href="/style3.css">
+</head>
+<body>
+<form th:action="@{/productos/edit/{id}(id=${Productos.id})}" th:object="${Productos}" method="post">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="name" th:field="*{nombre}" class="form-control" placeholder="Set new Product Name: "/>
+    </div>
+    <div class="box-footer">
+        <button type="submit" class="btn btn-primary">EDIT</button>
+        <a th:href="@{/productos}" class="go-back-button">Go Back</a>
+    </div>
+</form>
+</body>
+</html>

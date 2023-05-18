@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Modify Box</title>
+    <link rel="stylesheet" type="text/css" href="/style3.css">
+</head>
+<body>
+<form th:action="@{/caja/edit/{id}(id=${Caja.id})}" th:object="${Caja}" method="post">
+    <div class="form-group">
+        <label>Name</label>
+        <input type="text" name="name" th:field="*{nombre}" class="form-control" placeholder="Set new Box Name: "/>
+    </div>
+    <div class="box-footer">
+        <button type="submit" class="btn btn-primary">EDIT</button>
+        <a th:href="@{/caja}" class="go-back-button">Go Back</a>
+    </div>
+</form>
+</body>
+</html>
